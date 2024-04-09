@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  api:
+    build: ./API
+    environment:
+      MONGO_URL: ${MONGO_URL}
+      JWT_KEY: ${JWT_KEY}
+    ports:
+      - "8080:8080"
