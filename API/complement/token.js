@@ -7,7 +7,6 @@ function create(User) {
     const options = {expiresIn: '1h'};
     const token = ((jsonData, options) => {
         try {
-            const secretKey = "keduback_zekus$63!token";
             const token = jwt.sign(jsonData, process.env.JWT_KEY, options);
             return token;
         } catch (error) {
